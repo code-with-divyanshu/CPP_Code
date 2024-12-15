@@ -10,17 +10,17 @@ class Chai {
         string teaname;
         int servings;
 
-        public:
-            Chai(string name, int serve): teaname(name), servings(serve){};
+    public:
+        Chai(string name, int serve): teaname(name), servings(serve){};
 
-            // friend function
+        // friend function
 
-            friend bool compareServings(const Chai &Chai1, const Chai &chai2);
+        friend bool compareServings(const Chai &Chai1, const Chai &chai2);
 
-            void display() const {
-                cout << "Teaname: " << teaname << endl;
-                cout << "Servings : " << servings << endl;
-            }
+        void display() const {
+            cout << "Teaname: " << teaname << endl;
+            cout << "Servings : " << servings << endl;
+        }
 };
 
 bool compareServings(const Chai &chai1, const Chai &chai2){
