@@ -22,7 +22,22 @@ void displayEmployee(const Employee& emp) {
 
  int main(){
 
-    
+    vector<Employee> employees = {
+        {101, "Hitesh", 100000},
+        {102, "Saksham", 3000},
+        {103, "Shubham", 32345},
+        {104, "Karan", 985345},
+        {105, "Rahul", 50000},
+    };
+
+    // lambda - unnamed functions start with squre bracket
+
+    sort(employees.begin(), employees.end(), [](const Employee& e1, const Employee& e2){
+        return e1.salary > e2.salary;
+    });
+
+    cout << "Employees Sorted by Salary -> Highest to Lowest \n";
+    for_each(employees.begin(), employees.end(), displayEmployee);
 
     return 0;
  }
